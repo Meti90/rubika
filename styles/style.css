@@ -20,7 +20,6 @@ body {
     padding: 0px;
     box-sizing: border-box;
     user-select: none;
-
 }
 
 /* ::selection {
@@ -28,8 +27,12 @@ body {
 } */
 .left {
     width: 73%;
+    overflow-y: scroll;
+    position: relative;
 }
-
+.left::-webkit-scrollbar {
+    width: 0px;
+}
 .right {
     border-left: 1px solid #e6e6e6;
     overflow-y: scroll;
@@ -115,6 +118,7 @@ body {
     display: flex;
     padding: .375rem .8125rem .25rem 1rem;
     align-items: center;
+
 }
 
 .title_report {
@@ -142,12 +146,13 @@ body {
 }
 
 .chat {
-    height: 590px;
+    /* height: 590px; */
+    height: 1050px;
     /* height: 573px; */
     /* background: url(../images/bg.jpg); */
     background-color: #bed9a3;
     position: relative;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .chat::-webkit-scrollbar {
@@ -982,6 +987,7 @@ body {
     margin: 0 auto 1rem;
     max-width: 700px;
     padding: 0.75rem 1.5rem;
+    /* overflow-y: scroll; */
 }
 
 .imessage p {
@@ -1107,6 +1113,7 @@ p[class^="from-"].emoji::before {
     padding: 1rem;
     font-family: dana;
     margin-bottom: 50px;
+    /* overflow-y: scroll; */
 }
 
 h1 {
@@ -1131,7 +1138,7 @@ h2 {
     padding: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) and (max-width:900px) {
     body {
         margin: 0 0.5rem;
     }
@@ -1194,4 +1201,37 @@ h2 {
 }
 .red {
     color: #df3f40;
+}
+@media screen and (max-width:450px)  {
+    .right {
+        display: none;
+    }
+    .left {
+        width: 100%;
+    }
+    .div_type {
+        left:0px;
+        width: 100%;
+        background-color: #bed9a3;
+        margin-top: 1rem;
+        gap: .7rem;
+        display: flex;
+        height: fit-content;
+        padding: .5rem 0px;
+        justify-content: center;
+    }
+    body {
+        margin: 0px;
+    }
+    .type {
+        width: 80%;
+    }
+    .imessage {
+        padding: 0px;
+        margin: 0rem 0px;
+        margin-bottom: 2rem;
+    }
+    .container {
+        width: 100%;
+    }
 }
