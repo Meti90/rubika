@@ -147,7 +147,8 @@ body {
 
 .chat {
     /* height: 590px; */
-    height: 1050px;
+/*     height: 1050px; */
+    height : 1400px;
     /* height: 573px; */
     /* background: url(../images/bg.jpg); */
     background-color: #bed9a3;
@@ -1230,6 +1231,7 @@ h2 {
         padding: 0px;
         margin: 0rem 0px;
         margin-bottom: 2rem;
+        font-family : 0.9rem;
     }
     .container {
         width: 100%;
